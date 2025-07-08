@@ -1,0 +1,574 @@
+* {
+    margin: 0;
+    padding: 0;
+    /* overflow: hidden; */
+    font-family:  "Roboto", serif;
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+    background-color: black;
+    overflow: hidden;
+}
+
+.flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    width: 100vw;
+    height: 4rem;
+    gap: 1rem;
+    background-color: black;
+    color: white;
+    position: sticky;
+}
+
+.nav svg {
+    margin-left: 1.3rem;
+    fill: white;
+    height: 2.2rem;
+    margin-right: 1rem;
+}
+
+.homeandsearch {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    height: min-content;
+    width: 55vw;
+    margin: 0.5rem 0;
+}
+
+.home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(33, 33, 33);
+    border: none;
+    border-radius: 10rem;
+    width: 3rem;
+    height: 3rem;
+    color: rgb(209, 209, 209);
+}
+
+.home svg {
+    fill: white;
+    height: 1.5rem;
+    width: 1.5rem;
+    margin: 0;
+}
+
+.searchbar svg {
+    background-color: rgb(33, 33, 33);
+    fill: rgb(209, 209, 209);
+    border: none;
+    height: 2.7rem;
+    margin: 0;
+}
+
+.searchbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(33, 33, 33);
+    border-radius: 10rem;
+    width: 30vw;
+    padding: 0.25rem 1rem;
+    gap: 0.5rem;
+    border: none;
+}
+
+
+.searchbar input {
+    background-color: rgb(33, 33, 33);
+    color: white;
+    border: none;
+    width: 150%;
+    height: 1.3rem;
+    size: 2rem;
+    margin: 0;
+}
+
+.searchbar input:focus {
+    outline: none;
+    border: none;
+}
+
+.searchbar input::placeholder {
+    color: rgb(209, 209, 209);
+    font-size: medium;
+    align-items: center;
+    justify-content: center;
+}
+
+.sub-bar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    height: min-content;
+}
+
+.sub-bar svg {
+    margin-left: 1rem;
+}
+
+.btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    border-radius: 1rem;
+    border: none;
+    height: min-content;
+    gap: 0.25rem;
+    color: white;
+    font-weight: bold;
+    font-size: medium;
+}
+
+.btn:hover {
+    cursor: pointer;
+}
+
+.uprightbar{
+    display: flex;
+    padding-left: 1rem;
+}
+
+.uprightbar svg{
+    height: 1.7rem;
+}
+
+.endbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    height: min-content;
+}
+
+.install-btn svg {
+    background-color: black;
+    fill: white;
+    border: none;
+    height: 1rem;
+    margin: 0;
+}
+
+.install-btn {
+    width: 7rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    border-radius: 1rem;
+    gap: 0.5rem;
+    padding: 0.5rem;
+    color: white;
+    border: none;
+    font-weight: bold;
+}
+
+.sign-up {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    border-radius: 1rem;
+    width: 4vw;
+    height: min-content;
+    gap: 0.5rem;
+    padding: 0.5rem;
+    color: white;
+    border: none;
+    font-weight: bold;
+}
+
+.log-in {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    border-radius: 10rem;
+    width: 7.5vw;
+    height: min-content;
+    gap: 0.5rem;
+    padding: 1rem;
+    color: black;
+    font-weight: 800;
+    font-size: medium;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    height: 81vh;
+    width: 100vw;
+    gap: 0.5rem;
+    margin-bottom: 1vh;
+}
+
+.left {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    height: inherit;
+    width: 30vw;
+    border-radius: 10px;
+    background-color: rgb(22 22 22);
+    margin-left: 0.5rem;
+    
+}
+
+.right {
+    display: flex;
+    flex-direction: column;
+    height: 81vh;
+    width: 70vw;
+    border-radius: 10px;
+    background: rgb(22, 22, 22);
+    margin-right: 0.5rem;
+    overflow: hidden;
+}
+
+.sub-right {
+    flex: 1; /* Take up remaining space */
+    overflow-y: hidden; /* ensures scrollbar appears when needed */
+    overflow-x: hidden; /* hides horizontal scrollbar */
+    scrollbar-color: rgb(130, 130, 130) transparent; /* For Firefox: thumb then track */
+    align-items: center;
+    justify-content: center;
+}
+.sub-right:hover {
+    overflow-y: auto;
+}
+/* For Chrome, Safari, and Edge */
+.sub-right::-webkit-scrollbar {
+    width: 8px; /* Adjust width as needed */
+}
+
+.sub-right::-webkit-scrollbar-thumb {
+    background-color: rgb(0, 0, 0);
+    border-radius: 10px; /* Optional: gives rounded corners */
+}
+
+.sub-right::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+/* Hide arrow buttons (if they appear) */
+.sub-right::-webkit-scrollbar-button {
+    display: none;
+}
+
+.header{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    height: min-content;
+    width: 28vw;
+    padding: 0.5rem;
+    background-color: inherit;
+    margin-bottom: 1rem;
+}
+
+.Library{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+    height: min-content;
+    width: 10vw;
+    padding: 0.5rem;
+    background-color: inherit;
+    color: white;
+    font-style: bold;
+    font-weight: bolder;
+    border: none;
+    font-size: 0.9rem;
+}
+
+.Library:hover{
+    cursor: pointer;
+}
+
+.Library svg{
+    fill: white;
+    height: 1.5rem;
+    width: 1.5rem;
+}
+
+.plus{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: inherit;
+    border-radius: 10rem;
+    width: 2rem;
+    height: 2rem;
+    color: white;
+    border: none;
+    padding: 0.5rem;
+}
+
+.plus svg{
+    fill: white;
+    height: 1.2rem;
+    width: 1.2rem;
+}
+
+.grid{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: inherit;
+    color: white;
+    border: none;
+    gap: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.box{
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(39 39 39);
+    justify-content: center;
+    width:26vw;
+    height: 18vh;
+    color: white;
+    border: none;
+    gap: 1rem;
+    padding: 0 1rem;
+    border-radius: 0.6rem;
+}
+
+.subbox{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.crt_playlist{
+    border-radius: 5rem;
+    padding: 0.5rem;
+    width: 8vw;
+    font-weight: 700;
+    font-size: bolder;
+}
+.box div{
+    display: flex;
+}
+
+.brs_pdc{
+    border-radius: 5rem;
+    padding: 0.5rem;
+    width: 10vw;
+    font-weight: 700;
+}
+
+.smallgrid{
+    display: flex;
+    width: 25vw;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem;
+    color: white;  
+}
+
+.subgrid{
+    display: flex;
+    flex-direction: row;
+    gap: 1.2rem;
+}
+
+.small{
+    font-size: x-small;
+}
+
+.langbtn{
+    margin-top: 2rem;
+    display: flex;
+    width:28vw;
+}
+
+.lang{
+    display: flex;
+    gap: 0.25rem;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    border-radius: 10rem;
+    width: min-content;
+    height: min-content;
+    padding: 0.5rem 0.8rem;
+    color: white;
+    border: 1px solid white;
+    font-weight: bold;
+    margin-left: 1rem;
+}
+
+.lang svg{
+    /* fill: white; */
+    height: 1rem;
+    width: 1rem;
+}
+
+.header-right{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 1rem 1.2rem;
+    color: white;
+    width: 65vw;
+}
+
+.header-right h5{
+    height: min-content;
+    padding-top: 1rem;
+}
+
+.artists-grid{
+    display: flex;
+    flex-direction: row;
+    width: 70vw;
+    height: 30vh;
+    background-color: rgb(22 22 22);
+    padding: 0.5rem;
+    align-items: center;
+}
+
+.card{
+    display: flex;
+    flex-direction: column;
+    height: 28vh;
+    background-color: rgb(22 22 22);
+    width: 10vw;
+    justify-content: center;
+    align-items: center;
+    padding: 0.5rem;
+    gap: 1rem;
+    border-radius: 0.5rem;
+}
+
+.img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 19vh;
+    width: 19vh;
+    background-color: white;
+    border-radius: 150rem;
+}
+
+.sqr{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 19vh;
+    width: 19vh;
+    background-color: white;
+    border-radius: 0.5rem;
+}
+.cardtext{
+    display: flex;
+    flex-direction: column;
+    width: 9vw;
+    color: white;
+}
+
+.right-container{
+    margin-bottom: 2.5rem;
+}
+.right-end{
+    display: flex;
+    flex-direction: row;
+    gap: 5rem;
+    width: 68vw;
+    padding: 1.5rem 2rem 0rem 2rem;
+    color: white;
+}
+
+.jar{
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+.end-btns{
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    padding-left: 3rem;
+}
+
+.social-btn{
+    height: 2.5rem;
+    width: 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50rem;
+    background-color: rgb(104, 104, 104);
+    border: none;
+}
+
+.social-btn svg{
+    height: 0.9rem;
+    width: 0.9rem;
+    fill: white;
+}
+
+.line{
+    display: flex;
+    width: 64vw;
+    height: 0.1rem;
+    background-color: white;
+    margin: 2rem;
+}
+
+.copyright{
+    display: flex;
+    width: 64vw;
+    color: white;
+    padding: 0.5rem 0 5rem 2rem;
+}
+
+.endbox {
+    display: flex;
+    flex-direction: row;
+    height: 8.5vh;
+    width: 99vw;
+    background: linear-gradient(to right, rgb(239, 43, 177), rgb(110, 110, 235));
+    color: white;
+    gap: 46vw;
+    justify-content: center;
+    align-items: center;
+    margin: 0.5rem 0.5rem 0.8rem 0.5rem;
+}
+
+.sub-end{
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.for-free{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 3rem;
+    width: 10rem;
+    font-size: medium;
+    border-radius: 2rem;
+    padding: 1rem;
+    border: none;
+}
